@@ -10,7 +10,7 @@ Ontwerp en ontwikkel een webapp met een interactieve veldverkenner waarbij bezoe
 
 **Live website**
 
-https://kevinz2004.github.io/the-client-website/
+https://kevinz2004.github.io/all-human-accessible-website/
 
 ## Inhoudsopgave
 
