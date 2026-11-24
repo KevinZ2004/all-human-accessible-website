@@ -1,0 +1,572 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f1e8;
+    color: #243b2a;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #f4f1e8;
+    z-index: 9999;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+    color: #243b2a;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #243b2a;
+    font-size: 16px;
+}
+
+/* MAIN */
+main {
+    padding-top: 90px;
+    padding-bottom: 75px;
+}
+
+/* HERO / HOMEPAGE */
+.hero {
+    display: flex;
+    min-height: 550px;
+    padding: 40px 20px 80px;
+    gap: 50px;
+    align-items: center;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 0.95;
+    margin-bottom: 25px;
+}
+
+@media (min-width: 701px) {
+    h1 {
+        font-size: clamp(3.125rem, -0.8523rem + 9.0909vw, 4.375rem);
+    }
+}
+
+.hero-text p {
+    max-width: 450px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background: #3d6947;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+.hero-image {
+    width: 50%;
+}
+
+.image-placeholder {
+    height: 450px;
+    background: #b7c7a5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #3d4d3b;
+}
+
+/* INTRODUCTIE */
+.intro {
+    background: #dce5d2;
+    padding: 80px 50px;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 45px;
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.intro p {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* FOOTER */
+.main-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #243b2a;
+    color: white;
+    padding: 10px 20px;
+    z-index: 9999;
+}
+
+.main-footer ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-footer li {
+    flex: 1;
+    text-align: center;
+}
+
+.main-footer a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main-footer a:hover {
+    color: #243b2a;
+}
+
+.main-footer .icon {
+    font-size: 30px;
+    line-height: 1;
+    color: #fff;
+    filter: brightness(0) invert(1);
+}
+
+/* NIEUWSSECTIE */
+.news-section {
+    background: #dce5d2;
+    padding: 80px 50px;
+}
+
+.news-section h2 {
+    font-size: 45px;
+    color: #243b2a;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.news-slider {
+    display: flex;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 15px;
+}
+
+.news-card {
+    background: #f4f1e8;
+    border-radius: 30px;
+    overflow: hidden;
+    min-width: 270px;
+    flex: 1;
+    scroll-snap-align: start;
+}
+
+.news-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: 30px;
+}
+
+.news-content {
+    padding: 20px;
+}
+
+.news-date {
+    font-size: 13px;
+    color: #5d705f;
+}
+
+.news-content h3 {
+    color: #243b2a;
+    font-size: 22px;
+    margin: 8px 0 12px;
+}
+
+.news-content p {
+    color: #3d4d3b;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.news-content a {
+    color: #3d6947;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.news-content a:hover {
+    text-decoration: underline;
+}
+
+/* COLLECTIEPAGINA */
+.collectie {
+    padding: 140px 50px 50px;
+    background: #f4f1e8;
+}
+
+.collectie-header {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.collectie-header h1 {
+    font-size: 50px;
+    color: #243b2a;
+    margin-bottom: 20px;
+}
+
+.collectie-header p {
+    line-height: 1.6;
+    color: #3d4d3b;
+}
+
+/* COLLECTIEKAARTEN: TWEE KOLOMMEN */
+.bloemen-lijst {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* INDIVIDUELE BLOEMKAART */
+.bloem-item {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    margin-bottom: 0;
+    background: #dce5d2;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* AFBEELDING VAN DE BLOEM */
+.bloem-item img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* TEKST IN DE BLOEMKAART */
+.bloem-info {
+    padding: 25px;
+}
+
+.bloem-type {
+    font-size: 13px;
+    color: #5d705f;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.bloem-info h2 {
+    font-size: 32px;
+    color: #243b2a;
+    margin: 8px 0 15px;
+    overflow-wrap: anywhere;
+}
+
+.bloem-info p {
+    line-height: 1.6;
+    color: #3d4d3b;
+    margin-bottom: 20px;
+}
+
+.bloem-info p:last-child {
+    margin-bottom: 0;
+}
+
+.bloem-info a {
+    color: #3d6947;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.bloem-info a:hover {
+    text-decoration: underline;
+}
+
+/* OPENSTREETMAP */
+.kaart-sectie {
+    padding: 120px 50px 50px;
+    background: #f4f1e8;
+}
+
+.kaart-header {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.kaart-header h1 {
+    color: #243b2a;
+    margin-bottom: 20px;
+}
+
+.kaart-header p {
+    color: #3d4d3b;
+    line-height: 1.6;
+}
+
+.kaart-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.kaart-container iframe {
+    display: block;
+    width: 100%;
+    height: 500px;
+    border: 0;
+}
+
+.kaart-link {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0;
+    color: #3d6947;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.kaart-link:hover {
+    text-decoration: underline;
+}
+
+/* OPENSTREETMAP: VULT DE BESCHIKBARE PAGINARUIMTE */
+main:has(.kaart-sectie) {
+    padding: 90px 0 75px;
+}
+
+main:has(.kaart-sectie) .kaart-sectie {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 165px);
+    min-height: 300px;
+    padding: 0;
+}
+
+main:has(.kaart-sectie) .kaart-header {
+    display: none;
+}
+
+main:has(.kaart-sectie) .kaart-container {
+    flex: 1;
+    width: 100%;
+    max-width: none;
+    min-height: 0;
+    margin: 0;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+main:has(.kaart-sectie) .kaart-container iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    border: 0;
+}
+
+main:has(.kaart-sectie) .kaart-link {
+    flex: 0 0 auto;
+    margin: 8px auto 0;
+}
+
+/* MOBIELE WEERGAVE */
+@media (max-width: 700px) {
+    /* Header */
+    header {
+        height: 75px;
+        padding: 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    /* Pagina-indeling */
+    main {
+        padding-top: 75px;
+        padding-bottom: 90px;
+    }
+
+    /* Hero */
+    .hero {
+        flex-direction: column;
+        padding: 30px 20px 60px;
+    }
+
+    .hero-text,
+    .hero-image {
+        width: 100%;
+        order: 2;
+    }
+
+    .hero-text img {
+        width: 100%;
+        max-width: 450px;
+        height: 250px;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    .image-placeholder {
+        height: 300px;
+    }
+
+    /* Introductie */
+    .intro {
+        padding: 60px 20px;
+    }
+
+    .intro h2 {
+        font-size: 35px;
+    }
+
+    /* Nieuws */
+    .news-section {
+        padding: 60px 20px;
+    }
+
+    .news-section h2 {
+        font-size: 35px;
+    }
+
+    .news-card {
+        min-width: 85%;
+    }
+
+    /* Footer */
+    .main-footer {
+        padding: 20px 10px;
+    }
+
+    .main-footer a {
+        font-size: 16px;
+    }
+
+    .main-footer .icon {
+        font-size: 26px;
+    }
+
+    /* Collectiepagina */
+    .collectie {
+        padding: 100px 12px 60px;
+    }
+
+    .collectie-header {
+        margin: 0 auto 35px;
+        padding: 0 8px;
+    }
+
+    .collectie-header h1 {
+        font-size: 40px;
+    }
+
+    /* Twee collectiekaarten naast elkaar op mobiel */
+    .bloemen-lijst {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .bloem-item {
+        border-radius: 12px;
+    }
+
+    .bloem-item img {
+        height: 140px;
+    }
+
+    .bloem-info {
+        padding: 12px;
+    }
+
+    .bloem-info h2 {
+        font-size: 19px;
+        margin: 8px 0 10px;
+    }
+
+    .bloem-info p {
+        font-size: 13px;
+        line-height: 1.45;
+        margin-bottom: 12px;
+    }
+
+    .bloem-type {
+        font-size: 10px;
+    }
+
+    /* OpenStreetMap op mobiel */
+    main:has(.kaart-sectie) {
+        padding: 75px 0 90px;
+    }
+
+    main:has(.kaart-sectie) .kaart-sectie {
+        height: calc(100vh - 165px);
+        height: calc(100dvh - 165px);
+        min-height: 250px;
+    }
+}
