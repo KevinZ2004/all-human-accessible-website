@@ -45,5 +45,4 @@ Breakdown schets
 
 ## Veldverkenner
 
-Op de veldbheer pagina zie je welke activiteiten er te doen zijn op het bloemenveld. Daarnaast kan je ook bij elk voedseleiland zien welke bloemen er zijn en wat je ermee kan doen.
-
+Op de veldvekenner pagina zie je welke activiteiten er te doen zijn op het bloemenveld. Daarnaast kan je ook bij elk voedseleiland zien welke bloemen er zijn en wat je ermee kan doen.
