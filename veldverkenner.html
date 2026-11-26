@@ -6,11 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veldverkenner</title>
     <link rel="stylesheet" href="style.css">
-
-    <!-- TOEGEVOEGD: Leaflet + CSS voor de stipjes -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-    <link rel="stylesheet" href="veldverkenner.css">
 </head>
 
 <body>
@@ -30,11 +27,10 @@
             </div>
 
             <div class="kaart-container">
-                <!-- iframe is nu een Leaflet-kaart -->
                 <div id="kaart" role="region"
                     aria-label="Kaart van Park Frankendael met drie plantenlocaties"></div>
 
-                <!-- paneel met de collectie van de aangeklikte locatie -->
+                <!-- Paneel met de collectie van de aangeklikte locatie -->
                 <aside id="collectie-paneel" class="collectie-paneel" role="dialog"
                     aria-modal="false" aria-labelledby="paneel-titel" hidden>
                     <button type="button" class="paneel-sluit" aria-label="Sluit collectie">&times;</button>
@@ -50,29 +46,29 @@
     <footer class="main-footer">
         <ul>
             <li>
-                <a href="index.html" class="active">
-                    <img src="images/Home.svg" alt="Logo" class="icon">
+                <a href="index.html">
+                    <img src="images/Home.svg" alt="" class="icon">
                     <span>Home</span>
                 </a>
             </li>
 
             <li>
-                <a href="veldverkenner.html">
-                    <img src="images/Veldverkenner.svg" alt="Logo" class="icon">
+                <a href="veldverkenner.html" class="active" aria-current="page">
+                    <img src="images/Veldverkenner.svg" alt="" class="icon">
                     <span>Veldverkenner</span>
                 </a>
             </li>
 
             <li>
                 <a href="collectie.html">
-                    <img src="images/Collectie.svg" alt="Logo" class="icon">
+                    <img src="images/Collectie.svg" alt="" class="icon">
                     <span>Collectie</span>
                 </a>
             </li>
         </ul>
     </footer>
 
-    <!-- scripts (Leaflet eerst, daarna eigen script) -->
+    <!-- Leaflet eerst, daarna eigen script -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="veldverkenner.js"></script>
