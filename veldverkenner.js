@@ -6,39 +6,120 @@
 
 const locaties = [
     {
-        id: 'bij-de-kas',
-        naam: 'Bij De Kas',
-        intro: 'Een warme, beschutte plek met kruiden en snijbloemen.',
+        id: 'Voedseleiland 1',
+        naam: 'Voedseleiland 1',
         lat: 52.35206,
         lng: 4.93111,
         planten: [
-            { naam: 'Lavendel', latijn: 'Lavandula angustifolia', info: 'Bloeit juni – augustus, paars', foto: 'images/lavendel.jpg' },
-            { naam: 'Zonnehoed', latijn: 'Echinacea purpurea', info: 'Bloeit juli – oktober, roze', foto: 'images/zonnehoed.jpg' },
-            { naam: 'Rozemarijn', latijn: 'Salvia rosmarinus', info: 'Bloeit maart – mei, lichtblauw', foto: '' }
+            { naam: 'Lavendel', latijn: 'Lavandula angustifolia', info: 'Bloeit juni – augustus, paars' },
+            { naam: 'Zonnehoed', latijn: 'Echinacea purpurea', info: 'Bloeit juli – oktober, roze' },
+            { naam: 'Rozemarijn', latijn: 'Salvia rosmarinus', info: 'Bloeit maart – mei, lichtblauw' }
         ]
     },
     {
-        id: 'bij-de-brug',
-        naam: 'Bij de brug',
-        intro: 'Vochtminnende planten langs het water.',
+        id: 'Sierlint 1',
+        naam: 'Sierlint 1',
+        lat: 52.35216,
+        lng: 4.93140,
+        planten: [
+            { naam: 'Lavendel', latijn: 'Lavandula angustifolia', info: 'Bloeit juni – augustus, paars' },
+            { naam: 'Zonnehoed', latijn: 'Echinacea purpurea', info: 'Bloeit juli – oktober, roze' },
+            { naam: 'Rozemarijn', latijn: 'Salvia rosmarinus', info: 'Bloeit maart – mei, lichtblauw' }
+        ]
+    },
+    {
+        id: 'Sierlint 2',
+        naam: 'Sierlint 2',
+        lat: 52.35216,
+        lng: 4.93134,
+        planten: [
+            { naam: 'Lavendel', latijn: 'Lavandula angustifolia', info: 'Bloeit juni – augustus, paars' },
+            { naam: 'Zonnehoed', latijn: 'Echinacea purpurea', info: 'Bloeit juli – oktober, roze' },
+            { naam: 'Rozemarijn', latijn: 'Salvia rosmarinus', info: 'Bloeit maart – mei, lichtblauw' }
+        ]
+    },
+    {
+        id: 'Sierlint 3',
+        naam: 'Sierlint 3',
+        lat: 52.35189,
+        lng: 4.93085,
+        planten: [
+            { naam: 'Gele lis', latijn: 'Iris pseudacorus', info: 'Bloeit mei – juni, geel' },
+            { naam: 'Moerasspirea', latijn: 'Filipendula ulmaria', info: 'Bloeit juni – augustus, crèmewit' }
+        ]
+    },
+    {
+        id: 'Heuvel 1',
+        naam: 'Heuvel 1',
         lat: 52.35184,
         lng: 4.93101,
         planten: [
-            { naam: 'Gele lis', latijn: 'Iris pseudacorus', info: 'Bloeit mei – juni, geel', foto: '' },
-            { naam: 'Moerasspirea', latijn: 'Filipendula ulmaria', info: 'Bloeit juni – augustus, crèmewit', foto: '' }
+            { naam: 'Gele lis', latijn: 'Iris pseudacorus', info: 'Bloeit mei – juni, geel' },
+            { naam: 'Moerasspirea', latijn: 'Filipendula ulmaria', info: 'Bloeit juni – augustus, crèmewit' }
         ]
     },
     {
-        id: 'bij-de-heuvel',
-        naam: 'Bij de heuvel',
-        intro: 'Wilde bloemen en bijenplanten in het open grasland.',
+        id: 'Heuvel 2',
+        naam: 'Heuvel 2',
+        lat: 52.35169,
+        lng: 4.93078,
+        planten: [
+            { naam: 'Klaproos', latijn: 'Papaver rhoeas', info: 'Bloeit mei – juli, rood' },
+        ]
+    },
+    {
+        id: 'Heuvel 3',
+        naam: 'Heuvel 3',
+        lat: 52.35167,
+        lng: 4.93063,
+        planten: [
+            { naam: 'Klaproos', latijn: 'Papaver rhoeas', info: 'Bloeit mei – juli, rood' },
+        ]
+    },
+    {
+        id: 'Waterplantgebied',
+        naam: 'Waterplantgebied',
+        lat: 52.35162,
+        lng: 4.93055,
+        planten: [
+            { naam: 'Klaproos', latijn: 'Papaver rhoeas', info: 'Bloeit mei – juli, rood' },
+        ]
+    },
+    {
+        id: 'Voedseleiland 2',
+        naam: 'Voedseleiland 2',
         lat: 52.35174,
         lng: 4.93065,
         planten: [
-            { naam: 'Klaproos', latijn: 'Papaver rhoeas', info: 'Bloeit mei – juli, rood', foto: '' },
-            { naam: 'Korenbloem', latijn: 'Centaurea cyanus', info: 'Bloeit juni – september, blauw', foto: '' },
-            { naam: 'Margriet', latijn: 'Leucanthemum vulgare', info: 'Bloeit mei – september, wit', foto: '' },
-            { naam: 'Wilde cichorei', latijn: 'Cichorium intybus', info: 'Bloeit juli – oktober, lichtblauw', foto: '' }
+            { naam: 'Klaproos', latijn: 'Papaver rhoeas', info: 'Bloeit mei – juli, rood' },
+        ]
+    },
+    {
+        id: 'Voedseleiland 3',
+        naam: 'Voedseleiland 3',
+        lat: 52.35172,
+        lng: 4.93073,
+        planten: [
+            { naam: 'Klaproos', latijn: 'Papaver rhoeas', info: 'Bloeit mei – juli, rood' },
+        ]
+    },
+    {
+        id: 'Voedseleiland 4',
+        naam: 'Voedseleiland 4',
+        lat: 52.35162,
+        lng: 4.93042,
+        planten: [
+            { naam: 'Klaproos', latijn: 'Papaver rhoeas', info: 'Bloeit mei – juli, rood' },
+        ]
+    },
+    {
+        id: 'Voedseleiland 5',
+        naam: 'Voedseleiland 5',
+        kleur: '#e63946',
+        lat: 52.35155,
+        lng: 4.93045,
+        planten: [
+            { naam: 'Klaproos', latijn: 'Papaver rhoeas', info: 'Bloeit mei – juli, rood' },
         ]
     }
 ];
@@ -66,7 +147,6 @@ const stipIcoon = L.divIcon({
 
 const paneel = document.getElementById('collectie-paneel');
 const titel = document.getElementById('paneel-titel');
-const intro = document.getElementById('paneel-intro');
 const lijst = document.getElementById('paneel-lijst');
 const sluitKnop = paneel.querySelector('.paneel-sluit');
 let laatsteStip = null;
@@ -74,7 +154,6 @@ let laatsteStip = null;
 function toonCollectie(locatie, stipElement) {
     laatsteStip = stipElement;
     titel.textContent = locatie.naam;
-    intro.textContent = locatie.intro;
     lijst.replaceChildren();
 
     if (locatie.planten.length === 0) {
@@ -86,14 +165,6 @@ function toonCollectie(locatie, stipElement) {
     locatie.planten.forEach(plant => {
         const li = document.createElement('li');
         li.className = 'plant-kaart';
-
-        if (plant.foto) {
-            const img = document.createElement('img');
-            img.src = plant.foto;
-            img.alt = plant.naam;
-            img.loading = 'lazy';
-            li.appendChild(img);
-        }
 
         const tekst = document.createElement('div');
         const h3 = document.createElement('h3');
