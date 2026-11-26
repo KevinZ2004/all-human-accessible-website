@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -568,5 +567,165 @@ main:has(.kaart-sectie) .kaart-link {
         height: calc(100vh - 165px);
         height: calc(100dvh - 165px);
         min-height: 250px;
+    }
+}
+
+
+/* VELDVERKENNER, INTERACTIEVE STIPJES + COLLECTIEPANEEL */
+
+.kaart-container {
+    position: relative;
+}
+
+#kaart {
+    width: 100%;
+    height: 100%;
+}
+
+main:has(.kaart-sectie) .kaart-container #kaart {
+    position: absolute;
+    inset: 0;
+}
+
+/* Stipjes */
+.stip-wrapper {
+    background: none;
+    border: 0;
+}
+
+.stip {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: 3px solid #243b2a;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    transition: transform 0.15s ease;
+}
+
+.stip img {
+    width: 22px;
+    height: 22px;
+    transform: rotate(45deg);
+}
+
+.leaflet-marker-icon:hover .stip,
+.leaflet-marker-icon:focus-visible .stip {
+    transform: rotate(-45deg) scale(1.15);
+}
+
+.leaflet-marker-icon:focus-visible {
+    outline: 3px solid #3d6947;
+    outline-offset: 4px;
+    border-radius: 8px;
+}
+
+.collectie-paneel {
+    position: absolute;
+    z-index: 1100;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 60%;
+    overflow-y: auto;
+    padding: 20px 16px 24px;
+    background: #f4f1e8;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 -4px 16px rgba(36, 59, 42, 0.25);
+}
+
+.collectie-paneel[hidden] {
+    display: none;
+}
+
+.collectie-paneel h2 {
+    font-size: 28px;
+    color: #243b2a;
+    margin: 0 44px 6px 0;
+}
+
+.collectie-paneel h2:focus {
+    outline: none;
+}
+
+.paneel-intro {
+    color: #3d4d3b;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.paneel-sluit {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 44px;
+    height: 44px;
+    font-size: 28px;
+    line-height: 1;
+    color: #243b2a;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.paneel-sluit:focus-visible {
+    outline: 3px solid #3d6947;
+    border-radius: 8px;
+}
+
+.paneel-lijst {
+    display: grid;
+    gap: 12px;
+    list-style: none;
+}
+
+.plant-kaart {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 12px;
+    background: #dce5d2;
+    border-radius: 15px;
+}
+
+.plant-kaart img {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.plant-kaart h3 {
+    font-size: 18px;
+    color: #243b2a;
+}
+
+.plant-kaart em {
+    color: #5d705f;
+    font-size: 14px;
+}
+
+.plant-kaart p {
+    color: #3d4d3b;
+    margin-top: 4px;
+}
+
+/* Desktop: zijpaneel rechts */
+@media (min-width: 701px) {
+    .collectie-paneel {
+        left: auto;
+        top: 0;
+        width: 380px;
+        max-height: none;
+        border-radius: 0;
+        box-shadow: -4px 0 16px rgba(36, 59, 42, 0.25);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .stip {
+        transition: none;
     }
 }

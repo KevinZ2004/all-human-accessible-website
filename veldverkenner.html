@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veldverkenner</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- TOEGEVOEGD: Leaflet + CSS voor de stipjes -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <link rel="stylesheet" href="veldverkenner.css">
 </head>
 
 <body>
@@ -25,10 +30,18 @@
             </div>
 
             <div class="kaart-container">
-                <iframe title="OpenStreetMap - Park Frankendael"
-                    src="https://www.openstreetmap.org/export/embed.html?bbox=4.9298%2C52.3505%2C4.9330%2C52.3527&layer=mapnik&marker=52.351615%2C52.931402"
-                    loading="lazy" allowfullscreen>
-                </iframe>
+                <!-- iframe is nu een Leaflet-kaart -->
+                <div id="kaart" role="region"
+                    aria-label="Kaart van Park Frankendael met drie plantenlocaties"></div>
+
+                <!-- paneel met de collectie van de aangeklikte locatie -->
+                <aside id="collectie-paneel" class="collectie-paneel" role="dialog"
+                    aria-modal="false" aria-labelledby="paneel-titel" hidden>
+                    <button type="button" class="paneel-sluit" aria-label="Sluit collectie">&times;</button>
+                    <h2 id="paneel-titel" tabindex="-1"></h2>
+                    <p id="paneel-intro" class="paneel-intro"></p>
+                    <ul id="paneel-lijst" class="paneel-lijst"></ul>
+                </aside>
             </div>
         </section>
 
@@ -59,6 +72,10 @@
         </ul>
     </footer>
 
+    <!-- scripts (Leaflet eerst, daarna eigen script) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="veldverkenner.js"></script>
 </body>
 
 </html>
